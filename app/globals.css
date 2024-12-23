@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-geist-sans: "Geist", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tailwind custom styles for vertical line */
+.heading-with-vertical-line::before {
+  content: '';
+  position: absolute;
+  left: 0; /* Position the line on the left side of the element */
+  top: 0;
+  height: 100%; /* Makes the line span the full height of the parent */
+  width: 2px; /* Adjust the line thickness */
+  background-color: #1FCFF1; /* Line color */
+  margin-right: 15px; /* Adjust space between the line and text */
+}
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination {
+  display: none !important;
+}
+
+
+/* Hide both horizontal and vertical scrollbars */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Safari/Chrome */
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* If you need to handle overflow issue specifically */
+
+
+
+
+
