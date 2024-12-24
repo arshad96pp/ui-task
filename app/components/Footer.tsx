@@ -27,7 +27,7 @@ const Footer = () => {
         {/* Left section */}
         <div className="mb-9 lg:mb-0">
           <Image src={FooterIcon} alt="footer logo" className="w-[30px] mb-4" />
-          <p className="mb-4 max-w-44 sm:max-w-60">
+          <p className="mb-4 max-w-44 sm:max-w-60  text-white">
             Managed by Solana Foundation
           </p>
 

@@ -20,7 +20,7 @@ const Add = () => {
         />
 
         <div className="text-center">
-          <h1 className="p-7 mb-3 lg:p-0 text-[28px] sm:text-[28px] lg:text-[32px] 2xl:text-[36px] 3xl:text-[38px] lg:mb-12">
+          <h1 className=" text-white p-7 mb-3 lg:p-0 text-[28px] sm:text-[28px] lg:text-[32px] 2xl:text-[36px] 3xl:text-[38px] lg:mb-12">
             {" "}
             It's time to join the thousands of creators, artists,
             <br /> and developers using Solana.

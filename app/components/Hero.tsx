@@ -28,13 +28,13 @@ const Hero = () => {
       />
 
       <div className="text-center">
-        <h1 className="text-[35px] sm:text-[42px] lg:text-[48px] xl:text-[52px] 2xl:text-[64px] 3xl:text-[68px]  mb-5 " data-aos="zoom-in">
+        <h1 className="text-[35px] text-white sm:text-[42px] lg:text-[48px] xl:text-[52px] 2xl:text-[64px] 3xl:text-[68px]  mb-5 " data-aos="zoom-in">
           Powerful for developers.
           <br />
           Fast for everyone.
         </h1>
 
-        <p className="text-[16px] 2xl:text-[18px] 3xl:text-[20px]  max-w-[500px] mb-9 " data-aos="zoom-in">
+        <p className=" text-white text-[16px] 2xl:text-[18px] 3xl:text-[20px]  max-w-[500px] mb-9 " data-aos="zoom-in">
           Bring blockchain to the people. Solana supports experiences for power
           users, new consumers, and everyone in between.
         </p>

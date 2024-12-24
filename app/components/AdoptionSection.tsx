@@ -15,7 +15,7 @@ const AdoptionSection = () => {
       <div className="grid grid-cols-1 xl:grid-cols-[2fr_2.5fr]">
         {/* Left Section */}
         <div className="self-start top-20 xl:sticky" >
-          <h2 className="text-[28px]  lg:text-[32px] xl:text-[32px] 2xl:text-[36px] 3xl:text-[38px]">
+          <h2 className="text-[28px]  lg:text-[32px] xl:text-[32px] 2xl:text-[36px] 3xl:text-[38px]  text-white">
             Made for mass <br /> adoption.
           </h2>
         </div>
