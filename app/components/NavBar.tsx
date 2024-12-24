@@ -4,15 +4,19 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Logo from "../assets/Logo.png";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState(null); // Track hovered list item
+
+  const menuItems = ["Learn", "Build", "Network", "Community"];
 
   return (
     <header className="fixed top-0 left-0 w-full h-[67px] bg-black z-50">
-      <nav className=" container  h-full flex justify-between items-center px-4">
+      <nav className="container h-full flex justify-between items-center px-4">
         {/* Logo */}
         <div>
           <Image src={Logo} alt="Logo" className="w-[148px] lg:w-[181px]" />
@@ -21,18 +25,21 @@ const NavBar = () => {
         {/* Desktop Menu */}
         <div>
           <ul className="hidden lg:flex gap-6 text-white">
-            <li className="cursor-pointer flex items-center hover:text-[#1FCFF1] transition-colors duration-300">
-              Learn <KeyboardArrowDownRoundedIcon />
-            </li>
-            <li className="cursor-pointer flex items-center hover:text-[#1FCFF1] transition-colors duration-300">
-              Build <KeyboardArrowDownRoundedIcon />
-            </li>
-            <li className="cursor-pointer flex items-center hover:text-[#1FCFF1] transition-colors duration-300">
-              Network <KeyboardArrowDownRoundedIcon />
-            </li>
-            <li className="cursor-pointer flex items-center hover:text-[#1FCFF1] transition-colors duration-300">
-              Community <KeyboardArrowDownRoundedIcon />
-            </li>
+            {menuItems.map((item, index: any) => (
+              <li
+                key={index}
+                className="cursor-pointer flex items-center hover:text-[#1FCFF1] transition-colors duration-300"
+                onMouseEnter={() => setHoveredItem(index)}
+                onMouseLeave={() => setHoveredItem(null)}
+              >
+                {item}{" "}
+                {hoveredItem === index ? (
+                  <KeyboardArrowUpRoundedIcon />
+                ) : (
+                  <KeyboardArrowDownRoundedIcon />
+                )}
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -55,18 +62,14 @@ const NavBar = () => {
           }`}
         >
           <ul className="flex flex-col gap-4">
-            <li className="cursor-pointer flex items-center text-sm">
-              Learn <KeyboardArrowDownRoundedIcon />
-            </li>
-            <li className="cursor-pointer flex items-center text-sm">
-              Build <KeyboardArrowDownRoundedIcon />
-            </li>
-            <li className="cursor-pointer flex items-center text-sm">
-              Network <KeyboardArrowDownRoundedIcon />
-            </li>
-            <li className="cursor-pointer flex items-center text-sm">
-              Community <KeyboardArrowDownRoundedIcon />
-            </li>
+            {menuItems.map((item, index) => (
+              <li
+                key={index}
+                className="cursor-pointer flex items-center text-sm"
+              >
+                {item} <KeyboardArrowDownRoundedIcon />
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
